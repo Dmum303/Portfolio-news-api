@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleContainer } from './spotlight.styles';
 
-function Spotlight() {
+function Spotlight(props) {
   return (
     <>
       <StyleContainer>

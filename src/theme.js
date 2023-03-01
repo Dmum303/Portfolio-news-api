@@ -11,4 +11,4 @@ const COLORS = {
   },
 };
 
-export { FONTS, COLORS };
+export { COLORS, FONTS };

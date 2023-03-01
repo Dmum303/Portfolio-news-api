@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { COLORS, FONTS } from '../../theme';
 
 export const StyleContainer = styled.div`
   .spotlight-section {
@@ -14,7 +15,7 @@ export const StyleContainer = styled.div`
 
     .description {
       font-size: 20px;
-      font-family: ${(props) => props.theme.fonts.primary};
+      font-family: ${FONTS.primary};
       text-transform: uppercase;
     }
 
@@ -26,7 +27,7 @@ export const StyleContainer = styled.div`
 
       .divider {
         height: 2px;
-        background-color: '#282828';
+        background-color: ${COLORS.background.lightBlack};
         width: 35%;
       }
     }
