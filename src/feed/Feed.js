@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { NavBar } from '../components/navBar';
 import { WebsiteLogo } from '../components/websiteLogo';
 import { Spotlight } from '../components/spotlight';
+import { HomePage } from '../pages/homePage';
 
 const Feed = ({ navigate }) => {
   const [api, setApi] = useState([]);
@@ -15,8 +16,8 @@ const Feed = ({ navigate }) => {
       //'https://www.boredapi.com/api/activity')
       .then((response) => response.json())
       .then(async (data) => {
-        // console.log(data);
-        // console.log(data.response.results);
+        console.log(data);
+        console.log(data.response.results);
         //This should set the key from api results to the api var
         setApi(data.response.results);
         // console.log(api);
@@ -34,7 +35,8 @@ const Feed = ({ navigate }) => {
       <div id="wrapper">
         <WebsiteLogo />
         <NavBar />
-        <Spotlight />
+        {/* <Spotlight /> */}
+        <HomePage />
         <ul>
           {api.map((story) => (
             <div key={story.id}>
