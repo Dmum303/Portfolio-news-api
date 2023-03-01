@@ -25,6 +25,12 @@ export const StyleContainer = styled.div`
       justify-content: center;
       align-items: center;
 
+      .icon-container {
+        // display: flex;
+        // align-items: center;
+        margin: 0 3px;
+      }
+
       .divider {
         height: 2px;
         background-color: ${COLORS.background.lightBlack};

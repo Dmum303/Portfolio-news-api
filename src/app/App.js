@@ -4,14 +4,14 @@ import Feed from '../feed/Feed';
 import Landing from '../landing/Landing';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { FONTS } from '../theme';
+import { FONTS, COLORS } from '../theme';
 
 import { useNavigate, Routes, Route } from 'react-router-dom';
 
 const App = () => {
   return (
     <>
-      <ThemeProvider theme={{ fonts: FONTS }}>
+      <ThemeProvider theme={{ fonts: FONTS, colors: COLORS }}>
         <Routes>
           <Route path="/" element={<Landing navigate={useNavigate()} />} />
           <Route path="/feed" element={<Feed navigate={useNavigate()} />} />
