@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { NavBar } from '../components/navBar';
 import { WebsiteLogo } from '../components/websiteLogo';
-import { Spotlight } from '../components/spotlight';
+// import { Spotlight } from '../components/spotlight';
 import { HomePage } from '../pages/homePage';
 
 const Feed = ({ navigate }) => {
@@ -35,9 +35,8 @@ const Feed = ({ navigate }) => {
       <div id="wrapper">
         <WebsiteLogo />
         <NavBar />
-        {/* <Spotlight /> */}
-        <HomePage />
-        <ul>
+        <HomePage apiData={api} />
+        {/* <ul>
           {api.map((story) => (
             <div key={story.id}>
               <h2>{story.sectionName}</h2>
@@ -48,14 +47,12 @@ const Feed = ({ navigate }) => {
               <img
                 src={story.fields.thumbnail}
                 alt={story.fields.headline}
-                // width="500"
-                // height="600"
               ></img>
               <br></br>
               <a href={story.webUrl}>{story.sectionName}</a>
             </div>
           ))}
-        </ul>
+        </ul> */}
       </div>
     </>
   );

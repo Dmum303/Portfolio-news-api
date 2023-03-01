@@ -5,10 +5,10 @@ function ArticleCard(props) {
   return (
     <StyledContainer>
       <div className="article-card">
-        <img src="" alt="" />
-        <div className="title">Title</div>
+        <img src={props.apiData[0].fields.thumbnail} alt="" />
+        <div className="title">{props.apiData[0].sectionName}</div>
         <div className="divider"></div>
-        <div className="description">description</div>
+        <div className="description">{props.apiData[0].webTitle}</div>
         <div className="data-section"></div>
         <div className="like-icon">
           LIKE
@@ -19,7 +19,7 @@ function ArticleCard(props) {
           <span>165</span>
         </div>
         <div className="more-icon">
-          more
+          <a href={props.apiData[0].webUrl}>more</a>
           <span>...-</span>
         </div>
       </div>

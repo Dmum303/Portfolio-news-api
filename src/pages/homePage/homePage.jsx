@@ -10,7 +10,7 @@ function HomePage(props) {
       </div>
       <div className="news-container">
         <div className="articles-section">
-          <ArticleCard />
+          <ArticleCard apiData={props.apiData} />
         </div>
       </div>
     </div>
