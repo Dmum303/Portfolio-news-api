@@ -1,5 +1,6 @@
 const FONTS = {
   primary: 'Gloock, serif',
+  secondary: 'Golos Text',
 };
 
 const COLORS = {

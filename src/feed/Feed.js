@@ -9,21 +9,6 @@ const Feed = ({ navigate }) => {
   //usestate always returns an array with 2 values
   // use the second to set the info in the first, to be used later
 
-  // const loadApi = () => {
-  //   fetch(
-  //     'https://content.guardianapis.com/search?q=&query-fields=headline&show-fields=thumbnail,headline,byline&order-by=newest&api-key=33c178d6-be74-4321-93e7-ec61c0ac7723'
-  //   )
-  //     //'https://www.boredapi.com/api/activity')
-  //     .then((response) => response.json())
-  //     .then(async (data) => {
-  //       console.log(data);
-  //       console.log(data.response.results);
-  //       //This should set the key from api results to the api var
-  //       setApi(data.response.results);
-  //       // console.log(api);
-  //     });
-  // };
-
   const loadApi = async () => {
     try {
       const response = await fetch(
