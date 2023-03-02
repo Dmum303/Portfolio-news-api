@@ -6,5 +6,6 @@ export const StyledContainer = styled.div`
 
   .content {
     width: 1140px;
+    min-height: 100vh;
   }
 `;

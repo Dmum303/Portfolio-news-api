@@ -16,18 +16,19 @@ function ArticleCard(props) {
         <div className="title">{article.sectionName}</div>
         <div className="divider"></div>
         <div className="description">{article.webTitle}</div>
-        <div className="data-section"></div>
-        <div className="like-icon">
-          LIKE
-          <span>165</span>
-        </div>
-        <div className="comments-icon">
-          comments
-          <span>165</span>
-        </div>
-        <div className="more-icon">
-          <a href={article.webUrl}>more</a>
-          <span>...-</span>
+        <div className="data-section">
+          <div className="like-icon">
+            LIKE
+            <span>165</span>
+          </div>
+          <div className="comments-icon">
+            comments
+            <span>165</span>
+          </div>
+          <div className="more-icon">
+            <a href={article.webUrl}>more</a>
+            <span>...-</span>
+          </div>
         </div>
       </div>
     </StyledContainer>
