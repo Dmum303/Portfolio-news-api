@@ -1,5 +1,6 @@
 import React from 'react';
 import ArticleCard from '../../components/articleCard/articleCard';
+import { QuickInfoCard } from '../../components/quickInfoCard';
 import { Spotlight } from '../../components/spotlight';
 import { StyledContainer } from './homePage.styles';
 
@@ -8,6 +9,9 @@ function HomePage(props) {
     // return null or some loading indicator
     return null;
   }
+
+  console.log('Im here');
+  console.log(props.apiData2.articles);
 
   return (
     <StyledContainer>
@@ -26,10 +30,7 @@ function HomePage(props) {
             ))}
           </div>
           <div className="quick-infos-section">
-            <div className="quick-card">
-              <div className="title">Title</div>
-              <div className="description">Description</div>
-            </div>
+            <QuickInfoCard />
           </div>
         </div>
       </div>

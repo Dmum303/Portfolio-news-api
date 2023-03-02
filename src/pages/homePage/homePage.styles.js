@@ -19,7 +19,6 @@ export const StyledContainer = styled.div`
       }
 
       .quick-infos-section {
-        background-color: lightblue;
         max-width: 22%;
         margin-left: 18px;
       }
