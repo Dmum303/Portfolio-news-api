@@ -6,16 +6,16 @@ import {
   AiOutlineArrowRight as ArrowRight,
 } from 'react-icons/ai';
 
-function ArticleCard(props) {
-  const article = props.apiData;
+function ArticleCard({ img, title, description, url }) {
+  // const article = props.apiData;
 
   return (
     <StyledContainer>
       <div className="article-card">
-        <img src={article.fields.thumbnail} alt="" />
-        <div className="title">{article.sectionName}</div>
+        <img src={img} alt="" />
+        <div className="title">{title}</div>
         <div className="divider"></div>
-        <div className="description">{article.webTitle}</div>
+        <div className="description">{description}</div>
         <div className="data-section">
           <div className="like-icon vertical-centered">
             <Like size={16} />
@@ -26,7 +26,7 @@ function ArticleCard(props) {
             <span>125</span>
           </div>
           <div className="more-icon vertical-centered">
-            <a href={article.webUrl}>
+            <a href={url}>
               <span>more...</span>
               <ArrowRight size={16} />
             </a>

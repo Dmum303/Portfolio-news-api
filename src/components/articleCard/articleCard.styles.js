@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const StyledContainer = styled.div`
+  margin: 0px 15px 15px 15px;
   .article-card {
     display: flex;
     flex-direction: column;
-    border: solid 1px black;
+    ${'' /* border: solid 1px black; */}
     max-width: 400px;
     align-items: center;
 

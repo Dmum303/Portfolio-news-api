@@ -7,5 +7,16 @@ export const StyledContainer = styled.div`
   .content {
     width: 1140px;
     min-height: 100vh;
+
+    .news-container {
+      padding-top: 50px;
+      display: flex;
+      .articles-section {
+        display: flex;
+        max-width: 78%;
+        flex-wrap: wrap;
+        border-right: solid 1px #000000;
+      }
+    }
   }
 `;

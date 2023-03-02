@@ -16,8 +16,22 @@ function HomePage(props) {
 
         <div className="news-container">
           <div className="articles-section">
-            <ArticleCard apiData={props.apiData[0]} />
+            {props.apiData.map(({ fields, sectionName, webTitle, webUrl }) => (
+              <ArticleCard
+                // img={article.fields.thumbnail}
+                // title={article.sectionName}
+                // description={article.webTitle}
+                // url={article.webUrl}
+                img={fields.thumbnail}
+                title={sectionName}
+                description={webTitle}
+                url={webUrl}
+              />
+            ))}
+            {/* <ArticleCard apiData={props.apiData[0]} />
             <ArticleCard apiData={props.apiData[1]} />
+            <ArticleCard apiData={props.apiData[2]} />
+            <ArticleCard apiData={props.apiData[3]} /> */}
           </div>
         </div>
       </div>
