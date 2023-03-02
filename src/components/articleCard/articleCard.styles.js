@@ -13,7 +13,6 @@ export const StyledContainer = styled.div`
     }
 
     .title {
-      background-color: lightcoral;
       padding: 5px 10px 0px 10px;
       font-size: 25px;
       font-family: ${(props) => props.theme.fonts.secondary};
@@ -31,8 +30,6 @@ export const StyledContainer = styled.div`
     }
 
     .description {
-      // background-color: lightcoral;
-      // width: 100%;
       font-size: 15px;
       font-family: ${(props) => props.theme.fonts.secondary};
       text-align: center;
@@ -43,6 +40,24 @@ export const StyledContainer = styled.div`
 
     .data-section {
       display: flex;
+      margin-top: 13px;
+      margin-bottom: 30px;
+      justify-content: space-around;
+      width: 70%;
+
+      span {
+        padding-left: 5px;
+        font-size: 13px;
+      }
+
+      .vertical-centered {
+        display: flex;
+        align-items: center;
+      }
+
+      .more {
+        text-decoration: underline;
+      }
     }
   }
 `;
