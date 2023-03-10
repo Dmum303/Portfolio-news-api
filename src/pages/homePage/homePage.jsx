@@ -11,13 +11,11 @@ function HomePage({ apiData, apiData2 }) {
   }
 
   const newApiData2 = Object.keys(apiData2)
-    .slice(0, 20)
+    .slice(10, 25)
     .reduce((result, key) => {
       result.push(apiData2[key]);
       return result;
     }, []);
-
-  console.log(newApiData2);
 
   return (
     <StyledContainer>
