@@ -10,6 +10,15 @@ function HomePage({ apiData, apiData2 }) {
     return null;
   }
 
+  const newApiData2 = Object.keys(apiData2)
+    .slice(0, 20)
+    .reduce((result, key) => {
+      result.push(apiData2[key]);
+      return result;
+    }, []);
+
+  console.log(newApiData2);
+
   return (
     <StyledContainer>
       <div className="content">
@@ -28,7 +37,7 @@ function HomePage({ apiData, apiData2 }) {
             ))}
           </div>
           <div className="quick-infos-section">
-            {apiData2.map(({ title, url }) => (
+            {newApiData2.map(({ title, url }) => (
               <QuickInfoCard key={title} title={title} url={url} />
             ))}
           </div>
