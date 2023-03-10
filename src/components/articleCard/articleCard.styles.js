@@ -25,7 +25,7 @@ export const StyledContainer = styled.div`
       margin-top: 13px;
       margin-bottom: 3px;
       height: 1px;
-      width: 45%;
+      width: 60%;
       border-radius: 10px;
       background-color: ${(props) => props.theme.colors.background.lightBlack};
     }

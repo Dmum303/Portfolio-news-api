@@ -14,11 +14,17 @@ function HomePage({ apiData, apiData2 }) {
     // return null or some loading indicator
     return null;
   }
-
-  const newApiData2 = Object.keys(apiData2)
-    .slice(10, 25)
+  const newApiData = Object.keys(apiData)
+    .slice(0, 4)
     .reduce((result, key) => {
-      result.push(apiData2[key]);
+      result.push(apiData[key]);
+      return result;
+    }, []);
+
+  const newApiData2 = Object.keys(apiData)
+    .slice(5, 10)
+    .reduce((result, key) => {
+      result.push(apiData[key]);
       return result;
     }, []);
 
@@ -29,7 +35,7 @@ function HomePage({ apiData, apiData2 }) {
 
         <div className="news-container">
           <div className="articles-section">
-            {apiData.map(({ fields, sectionName, webTitle, webUrl, id }) => (
+            {newApiData.map(({ fields, sectionName, webTitle, webUrl, id }) => (
               <ArticleCard
                 key={id}
                 img={fields.thumbnail}
@@ -40,9 +46,17 @@ function HomePage({ apiData, apiData2 }) {
             ))}
           </div>
           <div className="quick-infos-section">
-            {newApiData2.map(({ title, url }) => (
-              <QuickInfoCard key={title} title={title} url={url} />
-            ))}
+            {newApiData2.map(
+              ({ fields, sectionName, webTitle, webUrl, id }) => (
+                <QuickInfoCard
+                  key={id}
+                  img={fields.thumbnail}
+                  title={sectionName}
+                  description={webTitle}
+                  url={webUrl}
+                />
+              )
+            )}
           </div>
         </div>
       </div>
