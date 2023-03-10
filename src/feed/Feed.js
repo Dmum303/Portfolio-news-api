@@ -6,7 +6,7 @@ import { HomePage } from '../pages/homePage';
 
 const Feed = ({ navigate }) => {
   const [api, setApi] = useState([]);
-  const [api2, setApi2] = useState([]);
+  // const [api2, setApi2] = useState([]);
   //usestate always returns an array with 2 values
   // use the second to set the info in the first, to be used later
 
@@ -25,26 +25,26 @@ const Feed = ({ navigate }) => {
     }
   };
 
-  const loadApi2 = async () => {
-    try {
-      const response = await fetch(
-        'https://newsapi.org/v2/everything?domains=wsj.com&apiKey=d937e914fcc04e84b650ce6ddcbfeaa5'
-      );
-      const data = await response.json();
-      // console.log(data);
-      // console.log(data.articles);
-      //This should set the key from api results to the api var
-      setApi2(data.articles);
-    } catch (error) {
-      console.log('Error fetching API 2 data: ', error);
-    }
-  };
+  // const loadApi2 = async () => {
+  //   try {
+  //     const response = await fetch(
+  //       'https://newsapi.org/v2/everything?domains=wsj.com&apiKey=d937e914fcc04e84b650ce6ddcbfeaa5'
+  //     );
+  //     const data = await response.json();
+  //     // console.log(data);
+  //     // console.log(data.articles);
+  //     //This should set the key from api results to the api var
+  //     setApi2(data.articles);
+  //   } catch (error) {
+  //     console.log('Error fetching API 2 data: ', error);
+  //   }
+  // };
 
   // calls the loadApi, I think it auto reloads page if any changes but it is simple sofar
   // without the [] it constantly reloads the page
   useEffect(() => {
     loadApi();
-    loadApi2();
+    // loadApi2();
   }, []);
 
   return (
@@ -52,7 +52,7 @@ const Feed = ({ navigate }) => {
       <div id="wrapper">
         <WebsiteLogo />
         <NavBar />
-        <HomePage apiData={api} apiData2={api2} />
+        <HomePage apiData={api} />
       </div>
     </>
   );

@@ -4,16 +4,12 @@ import { QuickInfoCard } from '../../components/quickInfoCard';
 import { Spotlight } from '../../components/spotlight';
 import { StyledContainer } from './homePage.styles';
 
-function HomePage({ apiData, apiData2 }) {
+function HomePage({ apiData }) {
   if (!Array.isArray(apiData) || apiData.length === 0) {
     // return null or some loading indicator
     return null;
   }
 
-  if (!Array.isArray(apiData2) || apiData2.length === 0) {
-    // return null or some loading indicator
-    return null;
-  }
   const newApiData = Object.keys(apiData)
     .slice(0, 4)
     .reduce((result, key) => {
