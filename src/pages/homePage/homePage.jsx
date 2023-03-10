@@ -4,14 +4,11 @@ import { QuickInfoCard } from '../../components/quickInfoCard';
 import { Spotlight } from '../../components/spotlight';
 import { StyledContainer } from './homePage.styles';
 
-function HomePage(props) {
-  if (!Array.isArray(props.apiData) || props.apiData.length === 0) {
+function HomePage({ apiData, apiData2 }) {
+  if (!Array.isArray(apiData) || apiData.length === 0) {
     // return null or some loading indicator
     return null;
   }
-
-  console.log('Im here');
-  console.log(props.apiData2.articles);
 
   return (
     <StyledContainer>
@@ -20,8 +17,9 @@ function HomePage(props) {
 
         <div className="news-container">
           <div className="articles-section">
-            {props.apiData.map(({ fields, sectionName, webTitle, webUrl }) => (
+            {apiData.map(({ fields, sectionName, webTitle, webUrl, id }) => (
               <ArticleCard
+                key={id}
                 img={fields.thumbnail}
                 title={sectionName}
                 description={webTitle}
@@ -30,7 +28,9 @@ function HomePage(props) {
             ))}
           </div>
           <div className="quick-infos-section">
-            <QuickInfoCard />
+            {apiData2.map(({ title, url }) => (
+              <QuickInfoCard key={title} title={title} url={url} />
+            ))}
           </div>
         </div>
       </div>

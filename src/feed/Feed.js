@@ -31,12 +31,12 @@ const Feed = ({ navigate }) => {
         'https://newsapi.org/v2/everything?domains=wsj.com&apiKey=d937e914fcc04e84b650ce6ddcbfeaa5'
       );
       const data = await response.json();
-      console.log(data);
-      console.log(data.response.results);
+      // console.log(data);
+      // console.log(data.articles);
       //This should set the key from api results to the api var
-      setApi2(data.response.results);
+      setApi2(data.articles);
     } catch (error) {
-      console.log('Error fetching API data: ', error);
+      console.log('Error fetching API 2 data: ', error);
     }
   };
 
