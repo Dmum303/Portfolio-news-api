@@ -10,6 +10,11 @@ function HomePage({ apiData, apiData2 }) {
     return null;
   }
 
+  if (!Array.isArray(apiData2) || apiData2.length === 0) {
+    // return null or some loading indicator
+    return null;
+  }
+
   const newApiData2 = Object.keys(apiData2)
     .slice(10, 25)
     .reduce((result, key) => {
