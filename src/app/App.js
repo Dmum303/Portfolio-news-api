@@ -4,9 +4,9 @@ import Feed from '../feed/Feed';
 import Landing from '../landing/Landing';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { FONTS, COLORS } from '../theme';
+import { COLORS, FONTS } from '../theme';
 
-import { useNavigate, Routes, Route } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 
 const App = () => {
   return (
