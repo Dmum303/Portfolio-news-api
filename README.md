@@ -29,3 +29,9 @@ React
 ### Acknowledgments
 
 This project was created using the Guardian API, which is provided by the Guardian newspaper. Special thanks to the Guardian for making this API available to developers.
+
+### Actions status
+
+![Workflow](https://github.com/Dmum303/Portfolio-news-api/actions/workflows/<WORKFLOW_FILE>/badge.svg)
+// Example Workflow Badge Url:
+![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
