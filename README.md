@@ -2,7 +2,7 @@
 
 This is a React web app that uses the Guardian API to display news content.
 
-### Getting Started
+## Getting Started
 
 Prerequisites
 You'll need to have Node.js installed on your machine. You can download it from the official website.
@@ -14,7 +14,7 @@ Navigate to the project directory in your terminal or command prompt.
 Run npm install to install the required dependencies.
 Running the App
 Run npm start to start the development server.
-Open http://localhost:3000 in your browser to view the app.
+Open "http://localhost:3000" in your browser to view the app.
 Features
 Displays the latest news articles from the Guardian API.
 
